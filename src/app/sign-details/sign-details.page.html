@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ sign.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-container">
+    <ion-card>
+      <img [src]="sign.imageUrl" alt="Seña {{ sign.name }}" />
+      <ion-card-content>
+        <p class="description">{{ sign.description }}</p>
+        <br />
+        <p class="tutorial">{{ sign.tutorial }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-card-content>
+    <p class="video-tutorial">Video Tutorial</p>
+  </ion-card-content>
+  <div class="video-container">
+    <iframe
+      width="50%"
+      height="315"
+      [src]="videoUrl | safe"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</ion-content>

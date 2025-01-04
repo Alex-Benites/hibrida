@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Catálogo de Lenguaje de Señas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Catálogo de Señas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="grid-container">
+    <div class="card" *ngFor="let sign of signCatalog">
+      <ion-card>
+        <img [src]="sign.imageUrl" alt="Seña {{ sign.name }}" class="image" />
+        <ion-card-header>
+          <ion-card-title>{{ sign.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ sign.description }}</p>
+          <ion-button fill="outline" color="primary" (click)="viewDetails(sign)">Aprender</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common'; // Importa NgFor
+import { NgFor } from '@angular/common';
 import { IonCardContent, IonCardTitle, IonCardHeader, IonButton, IonList, IonItem, IonLabel, IonFab, IonFabButton, IonIcon, IonCard, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { PercentPipe } from '@angular/common';
@@ -34,33 +34,35 @@ export class Tab0Page {
   constructor(private navCtrl: NavController) {}
   signCatalog = [
     {
-      name: 'Seña de Adiós',
-      description: 'Expresión usada para despedirse de alguien.',
-      tutorial: 'La mano se desplaza desde un costado de la frente hacia delante. La cabeza se reclina ligeramente y la boca se abre.',
-      imageUrl: 'assets/imagenes/adios.png',
-      videoUrl: 'assets/videos/adios.mp4'
+      name: 'Seña A',
+      tutorial: 'Cierra la mano en un puño.',
+      detalles: 'Mantén el pulgar levantado hacia un lado (como un "pulgar arriba"). El resto de los dedos permanecen doblados, cubriendo la palma.',
+      imageUrl: 'assets/imagenes/a.png',
     },
     {
-      name: 'Seña de Buenos Días',
-      description: 'Expresión de saludo usada para desear a alguien un día agradable.',
-      tutorial: 'La mano desde la frente se desplaza hacia abajo y después hacia arriba mientras se abre simultáneamente.',
-      imageUrl: 'assets/imagenes/buenosDias.png',
-      videoUrl: 'assets/videos/buenosDias.mp4',
+      name: 'Seña B',
+      tutorial: 'Abre la mano completamente.',
+      detalles: 'Los dedos están rectos y juntos, con la palma mirando hacia adelante. El pulgar está doblado hacia la base de la palma.',
+      imageUrl: 'assets/imagenes/b.png',
     },
     {
-      name: 'Seña de Gracias',
-      description: 'Expresión usada para demostrar agradecimiento.',
-      tutorial: 'La mano se separa del mentón hacia la palma contaría. El rostro sonríe.',
-      imageUrl: 'assets/imagenes/gracias.png',
-      videoUrl: 'assets/videos/gracias.mp4',
+      name: 'Seña C',
+      tutorial: 'Forma una "C"',
+      detalles: 'Dobla los dedos como si estuvieras sosteniendo una pelota pequeña. Mantén la palma hacia el frente y el pulgar opuesto a los dedos formando el arco de la "C"',
+      imageUrl: 'assets/imagenes/c.png',
+    },
+    {
+      name: 'Seña D',
+      tutorial: 'Levanta el dedo índice.',
+      detalles: 'Mantén el dedo índice recto apuntando hacia arriba. Los otros dedos están doblados hacia la palma, y el pulgar toca el medio de los dedos doblados.',
+      imageUrl: 'assets/imagenes/d.png',
+    },
+    {
+      name: 'Seña E',
+      tutorial: 'Haz un puño parcialmente cerrado.',
+      detalles: 'Dobla los dedos hacia la palma sin apretarlos completamente. El pulgar descansa sobre los dedos doblados.',
+      imageUrl: 'assets/imagenes/e.png',
     },
   ];
 
-  viewDetails(sign: any) {
-    this.navCtrl.navigateForward('/sign-details', {
-      queryParams: {
-        sign: JSON.stringify(sign)
-      }
-    });
-  }
 }

@@ -16,14 +16,18 @@
   <div class="grid-container">
     <div class="card" *ngFor="let sign of signCatalog">
       <ion-card>
-        <img [src]="sign.imageUrl" alt="Seña {{ sign.name }}" class="image" />
         <ion-card-header>
           <ion-card-title>{{ sign.name }}</ion-card-title>
         </ion-card-header>
-        <ion-card-content>
-          <p>{{ sign.description }}</p>
-          <ion-button fill="outline" color="primary" (click)="viewDetails(sign)">Aprender</ion-button>
-        </ion-card-content>
+        <img [src]="sign.imageUrl" alt="Seña {{ sign.name }}" class="image" />
+        <ion-card-header>
+          <ion-card-title>Posición de la mano:</ion-card-title>
+          <ion-label>{{ sign.tutorial }}</ion-label>
+        </ion-card-header>
+        <ion-card-header>
+          <ion-card-title>Detalles:</ion-card-title>
+          <ion-label>{{ sign.detalles }}</ion-label>
+        </ion-card-header>
       </ion-card>
     </div>
   </div>

@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 16px;
   padding: 16px;
 }
@@ -19,8 +19,8 @@ ion-card {
 }
 
 .image {
-  width: 500px;
-  height: 600px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 8px;
   margin: auto;
